@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TOKO DOKJA ID</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Rajdhani',sans-serif;
+  background: radial-gradient(circle at top,#0f0f2e,#02020a 70%);
+  color:#e0e0ff;
+  overflow-x:hidden;
+}
+header{
+  text-align:center;
+  padding:30px 15px;
+  background: linear-gradient(90deg,#00f0ff,#ff00ea);
+  color:#000;
+  font-family:'Orbitron',sans-serif;
+  text-shadow:0 0 10px #fff;
+}
+h1{font-size:2.3rem}
+.tag{font-size:.95rem}
+nav{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:18px;
+}
+button{
+  font-family:'Orbitron',sans-serif;
+  background:#0b0b1f;
+  border:2px solid #00f0ff;
+  color:#00f0ff;
+  padding:12px 20px;
+  border-radius:12px;
+  cursor:pointer;
+  transition:.3s;
+  box-shadow:0 0 12px #00f0ff55;
+}
+button:hover{
+  background:#00f0ff;
+  color:#000;
+  transform:scale(1.08);
+  box-shadow:0 0 25px #00f0ff;
+}
+section{display:none;padding:20px;animation:fade .4s ease}
+section.active{display:block}
+.card{
+  background:linear-gradient(135deg,#10102a,#050512);
+  border:1px solid #ff00ea66;
+  padding:18px;
+  margin:14px 0;
+  border-radius:14px;
+  box-shadow:0 0 18px #ff00ea44;
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-6px) scale(1.02);
+  box-shadow:0 0 28px #ff00ea;
+}
+.price{color:#00f0ff;font-weight:700;font-size:1.2rem}
+.buy{
+  margin-top:10px;
+  background:#ff00ea;
+  border:none;
+  color:#000;
+  padding:10px 14px;
+  border-radius:10px;
+  font-weight:700;
+}
+.buy:hover{background:#00f0ff}
+.desc{
+  padding:18px;
+  margin:18px;
+  border:1px dashed #00f0ff66;
+  border-radius:12px;
+  background:#050512;
+  line-height:1.6;
+}
+footer{
+  text-align:center;
+  padding:18px;
+  font-size:.85rem;
+  opacity:.8;
+}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<header>
+  <h1>TOKO DOKJA ID</h1>
+  <div class="tag">Minecraft Skin & Server Setup Marketplace</div>
+</header><div class="desc">
+TOKO DOKJA ID adalah markas digital para survivor dunia pixel yang haus identitas. 
+Di sini, setiap skin bukan sekadar tampilan — tapi alter ego tempurmu di dunia Minecraft. 
+Kami merakit persona, membangun server, dan menyalakan dunia baru dari nol hingga siap perang.Masuk sebagai pemain biasa… keluar sebagai legenda neon di tengah kiamat server.
+
+</div><nav>
+  <button onclick="openTab('skin')">MENU SKIN</button>
+  <button onclick="openTab('setup')">SERVER SETUP</button>
+</nav><section id="skin" class="active">
+  <div class="card">
+    <h2>SKIN BASIC</h2>
+    <div class="price">Rp15.000</div>
+    <p>Skin simpel tapi tetap savage. Cocok untuk pemain baru yang ingin tampil beda.</p>
+    <button class="buy" onclick="order('SKIN BASIC 15K')">Pesan</button>
+  </div>  <div class="card">
+    <h2>SKIN PREMIUM</h2>
+    <div class="price">Rp25.000</div>
+    <p>Detail tinggi, aura dominan, siap jadi pusat perhatian di server mana pun.</p>
+    <button class="buy" onclick="order('SKIN PREMIUM 25K')">Pesan</button>
+  </div>  <div class="card">
+    <h2>TEMPLATE SKIN</h2>
+    <div class="price">Rp5.000</div>
+    <p>Template siap edit untuk kreator yang ingin membuat identitas sendiri.</p>
+    <button class="buy" onclick="order('TEMPLATE SKIN 5K')">Pesan</button>
+  </div>
+</section><section id="setup">
+  <div class="card">
+    <h2>SET UP SERVER MINECRAFT</h2>
+    <div class="price">Rp20.000</div>
+    <p>Dari nol sampai online. Plugin, konfigurasi, optimasi — tinggal main.</p>
+    <button class="buy" onclick="order('SETUP SERVER MINECRAFT 20K')">Pesan</button>
+  </div>  <div class="card">
+    <h2>SET UP SERVER DISCORD</h2>
+    <div class="price">Rp10.000</div>
+    <p>Server Discord rapi, channel lengkap, role otomatis, siap komunitas.</p>
+    <button class="buy" onclick="order('SETUP SERVER DISCORD 10K')">Pesan</button>
+  </div>
+</section><footer>
+© TOKO DOKJA ID — Powered by Neon Survival System
+</footer><script>
+function openTab(id){
+  document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function order(item){
+  const phone = '6287739753513';
+  const msg = encodeURIComponent('Halo, saya ingin memesan ' + item + ' dari TOKO DOKJA ID');
+  window.open(`https://wa.me/${phone}?text=${msg}`,'_blank');
+}
+</script></body>
+  </html>
